@@ -1,5 +1,3 @@
-'use strict';
-
 console.log('Tab counter: background.js');
 
 const green: chrome.browserAction.ColorArray = [129, 214, 116, 255];

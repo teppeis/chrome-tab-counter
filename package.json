@@ -4,14 +4,13 @@
   "version": "1.0.0",
   "author": "Teppei Sato <teppeis@gmail.com>",
   "files": [
-    "img",
-    "lib",
-    "manifest.json"
+    "app",
+    "src"
   ],
   "scripts": {
     "build": "tsc",
     "lint:js": "eslint *.js",
-    "lint:ts": "tslint -c tslint.js src/*",
+    "lint:ts": "tslint -c tslint.js src/**/*.ts",
     "test": "run-s lint:*"
   },
   "dependencies": {},
