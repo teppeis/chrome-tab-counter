@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "teppeis/es2018",
+    "teppeis/+prettier"
+  ],
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "chrome": false
+  }
+}
