@@ -12,7 +12,7 @@
     "default_icon": "img/icon19.png"
   },
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["lib/background.js"],
     "persistent": false
   },
   "permissions": [

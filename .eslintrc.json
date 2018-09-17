@@ -1,12 +1,6 @@
 {
   "extends": [
-    "teppeis/es2018",
+    "teppeis/node-v10",
     "teppeis/+prettier"
-  ],
-  "env": {
-    "browser": true
-  },
-  "globals": {
-    "chrome": false
-  }
+  ]
 }

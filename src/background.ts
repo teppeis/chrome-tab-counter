@@ -2,11 +2,15 @@
 
 console.log('Tab counter: background.js');
 
-const green = [129, 214, 116, 255];
-const yellow = [235, 241, 130, 255];
-const red = [218, 98, 114, 255];
+const green: chrome.browserAction.ColorArray = [129, 214, 116, 255];
+const yellow: chrome.browserAction.ColorArray = [235, 241, 130, 255];
+const red: chrome.browserAction.ColorArray = [218, 98, 114, 255];
 
-const colors = [{count: 0, color: green}, {count: 20, color: yellow}, {count: 30, color: red}];
+interface Color {
+  count: number
+  color: chrome.browserAction.ColorArray
+}
+const colors: Color[] = [{count: 0, color: green}, {count: 20, color: yellow}, {count: 30, color: red}];
 
 function updateCount() {
   chrome.tabs.query({}, tabs => {
@@ -18,7 +22,7 @@ function updateCount() {
   });
 }
 
-function getColor(count) {
+function getColor(count: number): chrome.browserAction.ColorArray {
   for (let i = colors.length - 1; i < colors.length && i >= 0; i--) {
     if (colors[i].count <= count) {
       return colors[i].color;
