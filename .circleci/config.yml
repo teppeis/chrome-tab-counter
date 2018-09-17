@@ -22,7 +22,7 @@ jobs:
             - v{{ .Environment.CIRCLE_CACHE_VERSION }}-npm-cache-master-{{ .Environment.CIRCLE_JOB }}
       - run:
           name: Install dependencies
-          command: npm install
+          command: npm ci
       - run:
           name: Build
           command: npm run build
